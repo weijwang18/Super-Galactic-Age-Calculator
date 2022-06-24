@@ -8,7 +8,7 @@ describe("Age", () => {
     expect(reusableAge.earth).toEqual(28);
   });
 
-    test("should correctly return a user's age in Mercury years", () => {
-      expect(reusableAge.mercury).toEqual(119);
-    });
+  test("should correctly return a user's age in Mercury years", () => {
+    expect(reusableAge.returnMercuryAge()).toEqual(116);
+  });
 });
