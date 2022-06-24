@@ -1,3 +1,5 @@
-export default function AgeCalculator(earth){
-  this.earth = earth;
+export default class Age {
+  constructor(earth) {
+    this.earth = earth;
+  }
 }
