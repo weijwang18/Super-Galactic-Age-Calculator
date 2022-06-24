@@ -1,4 +1,4 @@
-import Age from "./../src/js/calculator";
+import {Age} from "./../src/js/calculator";
 
 describe("Age", () => {
   let reusableAge;
@@ -20,7 +20,11 @@ describe("Age", () => {
     expect(reusableAge.returnMarsAge()).toEqual(14);
   });
 
-    test("should correctly return a user's age in Jupiter years", () => {
-      expect(reusableAge.returnJupiterAge()).toEqual(2);
-    });
+  test("should correctly return a user's age in Jupiter years", () => {
+    expect(reusableAge.returnJupiterAge()).toEqual(2);
+  });
+
+  test("should correctly return how many years a user has left to live on earth", () => {
+    expect(reusableAge.calculateLifeExpectancy()).toEqual(52);
+  });
 });

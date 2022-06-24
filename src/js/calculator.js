@@ -1,10 +1,12 @@
-export default class Age {
-  constructor(earth, mercury, venus, mars, jupiter) {
+export class Age {
+  constructor(earth, mercury, venus, mars, jupiter, gender, LifeExpectancy) {
     this.earth = earth;
     this.mercury = mercury;
     this.venus = venus;
     this.mars = mars;
     this.jupiter = jupiter;
+    this.gender = gender;
+    this.LifeExpectancy = LifeExpectancy;
   }
 
   returnMercuryAge() {
@@ -26,4 +28,6 @@ export default class Age {
     this.jupiter = Math.floor(this.earth / 11.86);
     return this.jupiter;
   }
+
+  calculateLifeExpectancy() {}
 }
