@@ -14,12 +14,6 @@ export class Age {
     return this.mercury;
   }
 
-  MercuryLifeExpectancy() {
-    this.calculateLifeExpectancy();
-    this.mercury = Math.floor(this.yearsLeft / 0.24);
-    return this.mercury;
-  }
-
   returnVenusAge() {
     this.venus = Math.floor(this.earth / 0.62);
     return this.venus;
@@ -35,7 +29,7 @@ export class Age {
     return this.jupiter;
   }
 
-  calculateLifeExpectancy() {
+  returnYearsLeft() {
     if (this.gender === "female") {
       let LifeExpectancy = 81;
       this.yearsLeft = LifeExpectancy - this.earth;
@@ -46,4 +40,6 @@ export class Age {
       return this.yearsLeft;
     }
   }
+
+  convertYearsLeft() {}
 }
