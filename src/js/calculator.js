@@ -5,7 +5,11 @@ export default class Age {
   }
 
   returnMercuryAge() {
-    this.mercury = Math.round(this.earth / 0.241);
+    this.mercury = Math.floor(this.earth / 0.24);
     return this.mercury;
+  }
+
+  returnVenusAge() {
+    
   }
 }
