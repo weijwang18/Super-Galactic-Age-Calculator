@@ -12,7 +12,11 @@ describe("Age", () => {
     expect(reusableAge.returnMercuryAge()).toEqual(116);
   });
 
-    test("should correctly return a user's age in Venus years", () => {
-      expect(reusableAge.returnVenusAge()).toEqual(45);
-    });
+  test("should correctly return a user's age in Venus years", () => {
+    expect(reusableAge.returnVenusAge()).toEqual(45);
+  });
+
+  test("should correctly return a user's age in Mars years", () => {
+    expect(reusableAge.returnMarsAge()).toEqual(14);
+  });
 });
