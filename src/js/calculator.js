@@ -1,16 +1,22 @@
 export class Age {
-  constructor(earth, gender, mercury, venus, mars, jupiter, LifeExpectancy) {
+  constructor(earth, gender, mercury, venus, mars, jupiter, yearsLeft) {
     this.earth = earth;
     this.mercury = mercury;
     this.venus = venus;
     this.mars = mars;
     this.jupiter = jupiter;
     this.gender = gender;
-    this.LifeExpectancy = LifeExpectancy;
+    this.yearsLeft = yearsLeft;
   }
 
   returnMercuryAge() {
     this.mercury = Math.floor(this.earth / 0.24);
+    return this.mercury;
+  }
+
+  MercuryLifeExpectancy() {
+    this.calculateLifeExpectancy();
+    this.mercury = Math.floor(this.yearsLeft / 0.24);
     return this.mercury;
   }
 
@@ -31,13 +37,13 @@ export class Age {
 
   calculateLifeExpectancy() {
     if (this.gender === "female") {
-      this.LifeExpectancy = 81;
-      let yearsLeft = this.LifeExpectancy - this.earth;
-      return yearsLeft;
+      let LifeExpectancy = 81;
+      this.yearsLeft = LifeExpectancy - this.earth;
+      return this.yearsLeft;
     } else if (this.gender === "male") {
-      this.LifeExpectancy = 75;
-      let yearsLeft = this.LifeExpectancy - this.earth;
-      return yearsLeft;
+      let LifeExpectancy = 75;
+      this.yearsLeft = LifeExpectancy - this.earth;
+      return this.yearsLeft;
     }
   }
 }
