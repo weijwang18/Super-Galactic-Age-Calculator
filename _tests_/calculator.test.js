@@ -19,4 +19,8 @@ describe("Age", () => {
   test("should correctly return a user's age in Mars years", () => {
     expect(reusableAge.returnMarsAge()).toEqual(14);
   });
+
+    test("should correctly return a user's age in Jupiter years", () => {
+      expect(reusableAge.returnJupiterAge()).toEqual(2);
+    });
 });

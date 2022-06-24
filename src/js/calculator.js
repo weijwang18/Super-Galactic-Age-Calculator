@@ -20,4 +20,6 @@ export default class Age {
     this.mars = Math.floor(this.earth / 1.88);
     return this.mars;
   }
+
+  returnJupiterAge() {}
 }
