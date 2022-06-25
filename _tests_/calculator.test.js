@@ -3,8 +3,11 @@ import { Age } from "./../src/js/calculator";
 describe("Age", () => {
   let reusableAge;
 
-  test("1. should return a user's age in Earth years", () => {
+  beforeEach(() => {
     reusableAge = new Age(28);
+  });
+
+  test("1. should return a user's age in Earth years", () => {
     expect(reusableAge.earth).toEqual(28);
   });
 
@@ -36,6 +39,8 @@ describe("Age", () => {
 
   test("8. should return how many years a female user has left to live on Mercury", () => {
     const testHuman = new Age(28, "female", "mercury");
-    expect(testHuman.convertYearsLeft()).toEqual(220);
+    expect(testHuman.convertYearsLeft(28, "female", "mercury")).toEqual(220);
   });
+
+  
 });

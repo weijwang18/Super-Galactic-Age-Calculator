@@ -29,7 +29,7 @@ export class Age {
     return this.jupiter;
   }
 
-  returnYearsLeft() {
+  returnYearsLeft(age,gender) {
     if (this.gender === "female") {
       let LifeExpectancy = 81;
       this.yearsLeft = LifeExpectancy - this.earth;
@@ -41,5 +41,21 @@ export class Age {
     }
   }
 
-  convertYearsLeft() {}
+  convertYearsLeft(age, gender, planet) {
+    this.returnYearsLeft(age, gender);
+    switch (planet) {
+      case "mercury":
+        this.yearsLeft = Math.floor(this.yearsLeft / 0.24);
+        return this.yearsLeft;
+      case "venus":
+        this.yearsLeft = Math.floor(this.yearsLeft / 0.62);
+        return this.yearsLeft;
+      case "mars":
+        this.yearsLeft = Math.floor(this.yearsLeft / 1.88);
+        return this.yearsLeft;
+      case "jupiter":
+        this.yearsLeft = Math.floor(this.yearsLeft / 11.86);
+        return this.yearsLeft;
+    }
+  }
 }
