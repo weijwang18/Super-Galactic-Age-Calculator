@@ -6,7 +6,7 @@ import "./css/styles.css";
 import Age from "./js/calculator";
 
 $(document).ready(function () {
-  $("form").submit(function (event) {
+  $("form#ageForm").submit(function (event) {
     event.preventDefault();
     const userAge = $("#ageInput").val();
     let user = new Age(userAge);
@@ -19,5 +19,20 @@ $(document).ready(function () {
     let jupiter = user.returnJupiterAge();
     $(".jupiter").text(jupiter);
     $(".output").show();
+
+    $("button#lifespan").click(function () {
+      $(".output").hide();
+      const userGender = $("input[name='gender']:checked").val();
+      let user = new Age(userAge, userGender);
+      let mercuryYear = user.convertYearsLeft(userAge, userGender, "mercury");
+      $(".mercuryYear").text(mercuryYear);
+      let venusYear = user.convertYearsLeft(userAge, userGender, "venus");
+      $(".venusYear").text(venusYear);
+      let marsYear = user.convertYearsLeft(userAge, userGender, "mars");
+      $(".marsYear").text(marsYear);
+      let jupiterYear = user.convertYearsLeft(userAge, userGender, "jupiter");
+      $(".jupiterYear").text(jupiterYear);
+      $(".lifespan").show();
+    });
   });
 });
