@@ -7,6 +7,8 @@ import Age from "./js/calculator";
 
 $(document).ready(function () {
   $("form#ageForm").submit(function (event) {
+    $(".lifespan").hide();
+    $(".yearsPast").hide();
     event.preventDefault();
     const userAge = $("#ageInput").val();
     let user = new Age(userAge);
@@ -21,24 +23,29 @@ $(document).ready(function () {
     $(".output").show();
 
     $("button#lifespan").click(function (event) {
-         event.preventDefault();
+      event.preventDefault();
       $(".output").hide();
       const userGender = $("input[name='gender']:checked").val();
       let user = new Age(userAge, userGender);
-      if (userGender === "female" && userAge > 81 || userGender === "male" && userAge > 75){
-        $(".yearsPast").show()
+      if (
+        (userGender === "female" && userAge > 81) ||
+        (userGender === "male" && userAge > 75)
+      ) {
+        $(".lifespan").hide();
+        $(".yearsPast").show();
         let yearsPast = user.returnYearsPast();
         $(".years").text(yearsPast);
       } else {
-      let mercuryYear = user.convertYearsLeft(userAge, userGender, "mercury");
-      $(".mercuryYear").text(mercuryYear);
-      let venusYear = user.convertYearsLeft(userAge, userGender, "venus");
-      $(".venusYear").text(venusYear);
-      let marsYear = user.convertYearsLeft(userAge, userGender, "mars");
-      $(".marsYear").text(marsYear);
-      let jupiterYear = user.convertYearsLeft(userAge, userGender, "jupiter");
-      $(".jupiterYear").text(jupiterYear);
-      $(".lifespan").show();
+        let mercuryYear = user.convertYearsLeft(userAge, userGender, "mercury");
+        $(".mercuryYear").text(mercuryYear);
+        let venusYear = user.convertYearsLeft(userAge, userGender, "venus");
+        $(".venusYear").text(venusYear);
+        let marsYear = user.convertYearsLeft(userAge, userGender, "mars");
+        $(".marsYear").text(marsYear);
+        let jupiterYear = user.convertYearsLeft(userAge, userGender, "jupiter");
+        $(".jupiterYear").text(jupiterYear);
+        $(".yearsPast").hide();
+        $(".lifespan").show();
       }
     });
   });

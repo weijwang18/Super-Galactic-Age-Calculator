@@ -17,15 +17,19 @@ body {
 }
 
 .lifespan {
-    display: none;
+  display: none;
   margin-top: 30px;
   background-color: aliceblue;
   padding: 30px;
 }
 
 .yearsPast {
-      display: none;
+  display: none;
   margin-top: 30px;
   background-color: aliceblue;
   padding: 30px;
+}
+
+span {
+  color: black;
 }
