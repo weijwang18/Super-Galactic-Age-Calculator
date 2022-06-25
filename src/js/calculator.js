@@ -7,6 +7,7 @@ export default class Age {
     mars,
     jupiter,
     yearsLeft,
+    yearsPast,
     LifeExpectancy
   ) {
     this.earth = age;
@@ -16,6 +17,7 @@ export default class Age {
     this.jupiter = jupiter;
     this.gender = gender;
     this.yearsLeft = yearsLeft;
+    this.yearsPast = yearsPast;
     this.LifeExpectancy = LifeExpectancy;
   }
 
@@ -72,7 +74,8 @@ export default class Age {
   returnYearsPast(age, gender) {
     this.returnYearsLeft(age, gender);
     if (this.yearsLeft < 0) {
-      return Math.abs(this.yearsLeft);
+      this.yearsPast = Math.abs(this.yearsLeft);
+      return this.yearsPast;
     }
   }
 }

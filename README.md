@@ -11,7 +11,7 @@
 - Bootstrap
 - JQuery
 - webpack
-  \_ Jest
+- Jest
 
 ## Description
 
@@ -19,7 +19,11 @@ A solar year lasts 365 days on planet Earth. However, the length of a solar year
 
 ## Setup/Installation Requirements
 
-## Known Bugs
+- Clone this repository to your desktop.
+- Open Git Bash if on Windows and terminal if on Mac.
+- CD to the repository.
+- Run this command $ npm install.
+- Run this command $ npm run start.
 
 ## License
 

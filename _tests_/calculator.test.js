@@ -50,7 +50,7 @@ describe("Age", () => {
   });
 
   test("10. should return the number of years they have lived past the life expectancy", () => {
-    const oldHuman = new Age(90, "male");
-    expect(oldHuman.returnYearsPast(90, "male")).toEqual(15);
+    const oldHuman = new Age(100, "male");
+    expect(oldHuman.returnYearsPast(90, "male")).toEqual(25);
   });
 });
