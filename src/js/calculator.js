@@ -1,12 +1,22 @@
-export class Age {
-  constructor(earth, gender, mercury, venus, mars, jupiter, yearsLeft) {
-    this.earth = earth;
+export default class Age {
+  constructor(
+    age,
+    gender,
+    mercury,
+    venus,
+    mars,
+    jupiter,
+    yearsLeft,
+    LifeExpectancy
+  ) {
+    this.earth = age;
     this.mercury = mercury;
     this.venus = venus;
     this.mars = mars;
     this.jupiter = jupiter;
     this.gender = gender;
     this.yearsLeft = yearsLeft;
+    this.LifeExpectancy = LifeExpectancy;
   }
 
   returnMercuryAge() {
@@ -31,12 +41,12 @@ export class Age {
 
   returnYearsLeft() {
     if (this.gender === "female") {
-      let LifeExpectancy = 81;
-      this.yearsLeft = LifeExpectancy - this.earth;
+      this.LifeExpectancy = 81;
+      this.yearsLeft = this.LifeExpectancy - this.earth;
       return this.yearsLeft;
     } else if (this.gender === "male") {
-      let LifeExpectancy = 75;
-      this.yearsLeft = LifeExpectancy - this.earth;
+      this.LifeExpectancy = 75;
+      this.yearsLeft = this.LifeExpectancy - this.earth;
       return this.yearsLeft;
     }
   }
@@ -44,8 +54,6 @@ export class Age {
   convertYearsLeft(age, gender, planet) {
     this.returnYearsLeft(age, gender);
     switch (planet) {
-      case "earth":
-        this.yearsLeft;
       case "mercury":
         this.yearsLeft = Math.floor(this.yearsLeft / 0.24);
         return this.yearsLeft;
@@ -61,5 +69,10 @@ export class Age {
     }
   }
 
-  returnYearsPast() {}
+  returnYearsPast(age, gender) {
+    this.returnYearsLeft(age, gender);
+    if (this.yearsLeft < 0) {
+      return Math.abs(this.yearsLeft);
+    }
+  }
 }
