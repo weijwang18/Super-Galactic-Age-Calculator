@@ -4,6 +4,8 @@
 
 #### Week 5 Independent Project
 
+[GitHub Pages](https://weijwang18.github.io/Super-Galactic-Age-Calculator/)
+
 ## Technologies Used
 
 - HTML/CSS
@@ -30,4 +32,4 @@ A solar year lasts 365 days on planet Earth. However, the length of a solar year
 **MIT**
 
 Copyright (c) 2022 **Winnie Wang** (weijwang18@gmail.com)
-ç
+

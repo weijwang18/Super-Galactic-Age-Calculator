@@ -7,6 +7,8 @@ import Age from "./js/calculator";
 
 $(document).ready(function () {
   $("form#ageForm").submit(function (event) {
+    $(".lifespan").hide();
+    $(".yearsPast").hide();
     event.preventDefault();
     const userAge = $("#ageInput").val();
     let user = new Age(userAge);
