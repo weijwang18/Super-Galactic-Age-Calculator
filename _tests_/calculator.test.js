@@ -42,5 +42,10 @@ describe("Age", () => {
     expect(testHuman.convertYearsLeft(28, "female", "mercury")).toEqual(220);
   });
 
-  
+  test("8. should return how many years a female user has left to live on different planets", () => {
+    const testHuman = new Age(28, "female", "mercury");
+    expect(testHuman.convertYearsLeft(28, "female", "venus")).toEqual(85);
+    expect(testHuman.convertYearsLeft(28, "female", "mars")).toEqual(28);
+    expect(testHuman.convertYearsLeft(28, "female", "jupiter")).toEqual(4);
+  });
 });
