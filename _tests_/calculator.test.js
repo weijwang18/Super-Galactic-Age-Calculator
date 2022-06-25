@@ -1,4 +1,4 @@
-import Age from "./../src/js/calculator";
+import Age from "./../src/js/calculator.js";
 
 describe("Age", () => {
   let reusableAge;
@@ -51,6 +51,6 @@ describe("Age", () => {
 
   test("10. should return the number of years they have lived past the life expectancy", () => {
     const oldHuman = new Age(100, "male");
-    expect(oldHuman.returnYearsPast(90, "male")).toEqual(25);
+    expect(oldHuman.returnYearsPast(100, "male")).toEqual(25);
   });
 });

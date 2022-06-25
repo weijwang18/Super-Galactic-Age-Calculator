@@ -4,7 +4,28 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
     <title>Super Galactic Age Calculator</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>🔎 Your Age on Other Worlds</h1>
+        <h3>Want to melt those years away? Travel to an outer planet! 🌟</h3>
+      </div>
+      <form id="form">
+        <label for="ageInput">ENTER YOUR AGE →</label>
+        <input id="ageInput" type="text"></inpu>
+        <button type="button" class="btn btn-light">Submit</button>
+      </form>
+      <div class="output">
+        <h3>Your age on Mercury is <span class="mercury"></span></h3>
+        <h3>Your age on Venus is <span class="venus"></span></h3>
+        <h3>Your age on Mars is <span class="mars"></span></h3>
+        <h3>Your age on Jupiter is <span class="mars"></span></h3>
+      </div>
+    </div>
+  </body>
 </html>
