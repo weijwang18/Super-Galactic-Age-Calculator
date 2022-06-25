@@ -6,8 +6,21 @@ body {
   font-family: "Indie Flower", cursive;
 }
 
+h1 {
+  color:#FEEB4E;
+  font-weight: bolder;
+}
+
+.highlight {
+  color:#FEEB4E;
+}
+
 .header {
   margin-top: 50px;
+}
+
+#gender {
+  margin-top: 10px;
 }
 
 .output {
