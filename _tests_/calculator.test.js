@@ -48,4 +48,9 @@ describe("Age", () => {
     expect(testHuman.convertYearsLeft(28, "female", "mars")).toEqual(28);
     expect(testHuman.convertYearsLeft(28, "female", "jupiter")).toEqual(4);
   });
+
+  test("10. should return the number of years they have lived past the life expectancy", () => {
+    const oldHuman = new Age(90,"male","mercury")
+    expect(oldHuman.convertYearsLeft()).toEqual(15);
+  });
 });

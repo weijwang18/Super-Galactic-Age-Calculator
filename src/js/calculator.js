@@ -44,6 +44,8 @@ export class Age {
   convertYearsLeft(age, gender, planet) {
     this.returnYearsLeft(age, gender);
     switch (planet) {
+      case "earth":
+        this.yearsLeft;
       case "mercury":
         this.yearsLeft = Math.floor(this.yearsLeft / 0.24);
         return this.yearsLeft;
@@ -58,4 +60,6 @@ export class Age {
         return this.yearsLeft;
     }
   }
+
+  returnYearsPast() {}
 }
