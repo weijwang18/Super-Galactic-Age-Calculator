@@ -29,7 +29,7 @@ export class Age {
     return this.jupiter;
   }
 
-  returnYearsLeft(age,gender) {
+  returnYearsLeft() {
     if (this.gender === "female") {
       let LifeExpectancy = 81;
       this.yearsLeft = LifeExpectancy - this.earth;
