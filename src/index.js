@@ -20,10 +20,16 @@ $(document).ready(function () {
     $(".jupiter").text(jupiter);
     $(".output").show();
 
-    $("button#lifespan").click(function () {
+    $("button#lifespan").click(function (event) {
+         event.preventDefault();
       $(".output").hide();
       const userGender = $("input[name='gender']:checked").val();
       let user = new Age(userAge, userGender);
+      if (userGender === "female" && userAge > 81 || userGender === "male" && userAge > 75){
+        $(".yearsPast").show()
+        let yearsPast = user.returnYearsPast();
+        $(".years").text(yearsPast);
+      } else {
       let mercuryYear = user.convertYearsLeft(userAge, userGender, "mercury");
       $(".mercuryYear").text(mercuryYear);
       let venusYear = user.convertYearsLeft(userAge, userGender, "venus");
@@ -33,6 +39,7 @@ $(document).ready(function () {
       let jupiterYear = user.convertYearsLeft(userAge, userGender, "jupiter");
       $(".jupiterYear").text(jupiterYear);
       $(".lifespan").show();
+      }
     });
   });
 });
